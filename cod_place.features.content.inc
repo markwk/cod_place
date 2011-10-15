@@ -11,9 +11,10 @@ function cod_place_content_default_fields() {
     'field_name' => 'field_address',
     'type_name' => 'place',
     'display_settings' => array(
+      'weight' => '-4',
+      'parent' => '',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -61,10 +62,81 @@ function cod_place_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Address',
-      'weight' => '31',
+      'weight' => '-4',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_gmap_link
+  $fields['place-field_gmap_link'] = array(
+    'field_name' => 'field_gmap_link',
+    'type_name' => 'place',
+    'display_settings' => array(
+      'weight' => '-3',
+      'parent' => '',
+      'label' => array(
+        'format' => 'inline',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'link',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'link',
+    'active' => '1',
+    'attributes' => array(
+      'target' => '_blank',
+      'rel' => '',
+      'class' => '',
+      'title' => '',
+    ),
+    'display' => array(
+      'url_cutoff' => '80',
+    ),
+    'url' => 0,
+    'title' => 'none',
+    'title_value' => '',
+    'enable_tokens' => 0,
+    'validate_url' => 1,
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'title' => '',
+          'url' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Map',
+      'weight' => '-3',
+      'description' => '',
+      'type' => 'link',
+      'module' => 'link',
     ),
   );
 
@@ -73,7 +145,7 @@ function cod_place_content_default_fields() {
     'field_name' => 'field_images',
     'type_name' => 'place',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => 0,
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -151,10 +223,73 @@ function cod_place_content_default_fields() {
       'insert_class' => '',
       'insert_width' => '',
       'label' => 'Images',
-      'weight' => '33',
+      'weight' => 0,
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
+    ),
+  );
+
+  // Exported field: field_place_phone
+  $fields['place-field_place_phone'] = array(
+    'field_name' => 'field_place_phone',
+    'type_name' => 'place',
+    'display_settings' => array(
+      'weight' => '-2',
+      'parent' => '',
+      'label' => array(
+        'format' => 'inline',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '20',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => 5,
+      'size' => '20',
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_place_phone][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Phone',
+      'weight' => '-2',
+      'description' => '',
+      'type' => 'text_textfield',
+      'module' => 'text',
     ),
   );
 
@@ -162,6 +297,8 @@ function cod_place_content_default_fields() {
   // Included for use with string extractors like potx.
   t('Address');
   t('Images');
+  t('Map');
+  t('Phone');
 
   return $fields;
 }

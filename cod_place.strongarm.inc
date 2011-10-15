@@ -75,16 +75,23 @@ function cod_place_strongarm() {
   $strongarm->name = 'content_extra_weights_place';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '0',
-    'revision_information' => '20',
-    'author' => '20',
-    'options' => '25',
-    'comment_settings' => '30',
-    'menu' => '-2',
-    'path' => '30',
-    'path_redirect' => '30',
+    'body_field' => '-1',
+    'revision_information' => '2',
+    'author' => '3',
+    'options' => '4',
+    'comment_settings' => '5',
+    'menu' => '1',
+    'path' => '7',
+    'path_redirect' => '6',
   );
   $export['content_extra_weights_place'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'form_build_id_place';
+  $strongarm->value = 'form-df0b58de4d01248ef39b5ace37a72f35';
+  $export['form_build_id_place'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -106,9 +113,16 @@ function cod_place_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'signup_node_default_state_place';
-  $strongarm->value = 'disabled';
-  $export['signup_node_default_state_place'] = $strongarm;
+  $strongarm->name = 'pathauto_node_place_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_place_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'show_diff_inline_place';
+  $strongarm->value = 0;
+  $export['show_diff_inline_place'] = $strongarm;
 
   return $export;
 }
